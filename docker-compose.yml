@@ -1,0 +1,71 @@
+networks:
+  xpartdevs-network:
+    driver: bridge
+    name: xpartdevs-network
+services:
+  xpartdevs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: xpartdevs-app
+    depends_on:
+      - xpartdevs-db
+    deploy:
+      resources:
+        limits:
+          cpus: '0.8'
+          memory: 600M
+    environment:
+      OPCACHE_VALIDATE_TIMESTAMPS: 1
+    image: xpartdevs/xpartdevs-app
+    networks:
+      - xpartdevs-network
+    ports:
+      - 8002:6001
+      - 8001:80
+    restart: unless-stopped
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor
+  xpartdevs-db:
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: xpartdevs-db
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 300M
+    environment:
+      MYSQL_DATABASE: xpartdevs-db
+      MYSQL_ROOT_PASSWORD: 12345678
+    image: mysql:5.7
+    networks:
+      - xpartdevs-network
+    restart: unless-stopped
+    volumes:
+      - xpartdevs-db:/var/lib/mysql
+  xpartdevs-pma:
+    container_name: xpartdevs-pma
+    depends_on:
+      - xpartdevs-db
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 100M
+    environment:
+      PMA_HOST: xpartdevs-db
+      PMA_PASSWORD: 12345678
+      PMA_USER: root
+      UPLOAD_LIMIT: 200M
+    image: phpmyadmin/phpmyadmin:5.2.0
+    networks:
+      - xpartdevs-network
+    ports:
+      - 8003:80
+    restart: unless-stopped
+version: '3.7'
+volumes:
+  xpartdevs-db:
+    driver: local
+    name: xpartdevs-db
