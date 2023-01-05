@@ -26,7 +26,7 @@
        
                    <div class="simpleParallax-video">
                         <div class="simpleParallax">
-                            <img width="500" height="665" src="/public/img/loading-blog.gif" class="lazy thumparallax img-fluid" data-src="{{$aboutsetting->about_image}}" alt="about-image">
+                            <img width="500" height="665" src="/img/loading-blog.gif" class="lazy thumparallax img-fluid" data-src="{{$aboutsetting->about_image}}" alt="about-image">
                         </div>
                         <a class="popup-vimeo-video" href="{{$aboutsetting->about_ytlink}}">
                             <i class="far fa-play-circle"></i>
@@ -59,7 +59,7 @@
                   <div class="col-md-4">
                       <div class="niva-team">
                           <div class="thumbnail"> 
-                              <img width="350" height="350" class="lazy img-fluid" src="/public/img/loading-blog.gif" data-src="{{$member->photo ? '/public/images/media/' . $member->photo->file : '/public/img/200x200.png'}}" alt="team-niva">
+                              <img width="350" height="350" class="lazy img-fluid" src="/img/loading-blog.gif" data-src="{{$member->photo ? '/images/media/' . $member->photo->file : '/img/200x200.png'}}" alt="team-niva">
                           </div>
                           <div class="content">
                               <h5 class="title">{{$member->name}}</h5>
@@ -106,7 +106,7 @@
             <div class="clients-slider owl-carousel">
                   @foreach($clients as $client)
                   <div class="clients-slide">
-                      <a title="{{$client->company_name}}" target="_blank" href="{{$client->company_link}}"><img class="client_image owl-lazy" data-src="{{$client->photo ? '/public/images/media/' . $client->photo->file : '/public/img/200x200.png'}}" alt="{{$client->company_name}}"></a>
+                      <a title="{{$client->company_name}}" target="_blank" href="{{$client->company_link}}"><img class="client_image owl-lazy" data-src="{{$client->photo ? '/images/media/' . $client->photo->file : '/img/200x200.png'}}" alt="{{$client->company_name}}"></a>
                   </div>
                   @endforeach
             </div>

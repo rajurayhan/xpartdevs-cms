@@ -40,7 +40,7 @@
 					<div class="col-md-6">
 						<div class="featured-image">
 							<a href="{{$project->img_gal1}}">
-								<img class="img-fluid lazy" src="/public/img/loading-blog.gif" data-src="{{$project->img_gal1}}">
+								<img class="img-fluid lazy" src="/img/loading-blog.gif" data-src="{{$project->img_gal1}}">
 							</a>
 						</div>
 					</div>
@@ -48,7 +48,7 @@
 					<div class="col-md-6">
 						<div class="featured-image">
 							<a href="{{$project->img_gal2}}">
-								<img class="img-fluid lazy" src="/public/img/loading-blog.gif" data-src="{{$project->img_gal2}}">
+								<img class="img-fluid lazy" src="/img/loading-blog.gif" data-src="{{$project->img_gal2}}">
 							</a>
 						</div>
 					</div>
@@ -56,7 +56,7 @@
 					<div class="col-md-6">
 						<div class="featured-image">
 							<a href="{{$project->img_gal3}}">
-								<img class="img-fluid lazy" src="/public/img/loading-blog.gif" data-src="{{$project->img_gal3}}">
+								<img class="img-fluid lazy" src="/img/loading-blog.gif" data-src="{{$project->img_gal3}}">
 							</a>
 						</div>
 					</div>
@@ -64,15 +64,15 @@
 					<div class="col-md-6">
 						<div class="featured-image">
 							<a href="{{$project->img_gal4}}">
-								<img class="img-fluid lazy" src="/public/img/loading-blog.gif" data-src="{{$project->img_gal4}}">
+								<img class="img-fluid lazy" src="/img/loading-blog.gif" data-src="{{$project->img_gal4}}">
 							</a>
 						</div>
 					</div>
 
 					<div class="col-md-6">
 						<div class="featured-image">
-							<a href="{{$project->photo ? '/public/images/media/' . $project->photo->file : '/public/img/200x200.png'}}">
-								<img class="img-fluid lazy" src="/public/img/loading-blog.gif" data-src="{{$project->photo ? '/public/images/media/' . $project->photo->file : '/public/img/200x200.png'}}">
+							<a href="{{$project->photo ? '/images/media/' . $project->photo->file : '/img/200x200.png'}}">
+								<img class="img-fluid lazy" src="/img/loading-blog.gif" data-src="{{$project->photo ? '/images/media/' . $project->photo->file : '/img/200x200.png'}}">
 							</a>
 						</div>
 					</div>

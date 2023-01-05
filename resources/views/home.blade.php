@@ -24,7 +24,7 @@
                          </div>
                          <div class="col-md-6">
                             <div class="slider-image">
-                               <img width="450" height="450" class="owl-lazy img-fluid slider-img" data-src="{{$slido->photo ? '/public/images/media/' . $slido->photo->file : '/public/img/200x200.png'}}" alt="" >
+                               <img width="450" height="450" class="owl-lazy img-fluid slider-img" data-src="{{$slido->photo ? '/images/media/' . $slido->photo->file : '/img/200x200.png'}}" alt="" >
                             </div>
                          </div>
                      </div>
@@ -90,7 +90,7 @@
                             <div class="col-md-6">
                                 <div class="item-about">
                                     <div class="imgone big-paral">
-                                        <div class="simpleParallax"><img src="/public/img/loading-blog.gif" width="500" height="666" class="lazy thumparallax-down img-fluid" data-src="{{$homesetting->about_image1}}" alt="two-images-1.jpg"></div>
+                                        <div class="simpleParallax"><img src="/img/loading-blog.gif" width="500" height="666" class="lazy thumparallax-down img-fluid" data-src="{{$homesetting->about_image1}}" alt="two-images-1.jpg"></div>
                                     </div>
                                     <div class="exp-about">
                                         <h5 class="nmb-font-about">{{$homesetting->about_yearstitle}}</h5>
@@ -101,7 +101,7 @@
                             <div class="col-md-6">
                                 <div class="item-about">
                                     <div class="imgtwo big-paral">
-                                        <div class="simpleParallax"><img src="/public/img/loading-blog.gif" width="500" height="820" class="lazy thumparallax img-fluid" data-src="{{$homesetting->about_image2}}" alt="two-images-1.jpg"></div>
+                                        <div class="simpleParallax"><img src="/img/loading-blog.gif" width="500" height="820" class="lazy thumparallax img-fluid" data-src="{{$homesetting->about_image2}}" alt="two-images-1.jpg"></div>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@
                     @foreach( $services as $service )
                     <div class="service-box-slide">
                         <div class="service-box-parent">
-                            <div class="service-box" data-background-image-url="{{$service->photo ? '/public/images/media/' . $service->photo->file : '/public/img/200x200.png'}}">
+                            <div class="service-box" data-background-image-url="{{$service->photo ? '/images/media/' . $service->photo->file : '/img/200x200.png'}}">
 
                                 {!!$service->icon!!}
                                 <h5>{{$service->title}}</h5>
@@ -169,7 +169,7 @@
                         <div class="col-project-big">
                             <div class="col-project-inner">
                                     
-                                    <a href="{{URL::to('/')}}/project/{{$project->slug}}"><img src="/public/img/loading-blog.gif" width="500" height="820" class="lazy img-fluid" data-src="{{$project->photo ? '/public/images/media/' . $project->photo->file : '/public/img/200x200.png'}}" alt="{{$project->title}}"></a>
+                                    <a href="{{URL::to('/')}}/project/{{$project->slug}}"><img src="/img/loading-blog.gif" width="500" height="820" class="lazy img-fluid" data-src="{{$project->photo ? '/images/media/' . $project->photo->file : '/img/200x200.png'}}" alt="{{$project->title}}"></a>
 
                                     <div class="project-popup">
                                         <a href="{{URL::to('/')}}/project/{{$project->slug}}">
@@ -228,7 +228,7 @@
                             <div class="post-thumbnail">
                                 <a class="relative" href="{{URL::to('/')}}/post/{{$post->slug}}">
                                     <div class="featured_image_blog">
-                                        <img class="lazy blog_post_image img-fluid" width="350" height="300" src="https://cdn.dribbble.com/users/105033/screenshots/1132714/loading-animation-800.gif" data-src="{{$post->photo ? '/public/images/media/' . $post->photo->file : '/public/img/200x200.png'}}" alt="{{$post->title}}">
+                                        <img class="lazy blog_post_image img-fluid" width="350" height="300" src="https://cdn.dribbble.com/users/105033/screenshots/1132714/loading-animation-800.gif" data-src="{{$post->photo ? '/images/media/' . $post->photo->file : '/img/200x200.png'}}" alt="{{$post->title}}">
                                         <div class="flex-icon">
                                             <div class="flex-icon-inside">
                                                 <i class="fas fa-link"></i>

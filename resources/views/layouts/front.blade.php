@@ -27,14 +27,14 @@
 
     <meta itemprop="name" content="@yield('title')">
     <meta itemprop="description" content="@yield('meta')">
-    <meta itemprop="image" content="{{route('home')}}{{$setting->photo ? '/public/images/media/' . $setting->photo->file : '/public/img/200x200.png'}}">
+    <meta itemprop="image" content="{{route('home')}}{{$setting->photo ? '/images/media/' . $setting->photo->file : '/img/200x200.png'}}">
     
     @if($setting->OGgraph_switch == 1)
 
     <meta property="og:title" content="@yield('title')" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{route('home')}}" />
-    <meta property="og:image" content="{{route('home')}}{{$setting->photo ? '/public/images/media/' . $setting->photo->file : '/public/img/200x200.png'}}" />
+    <meta property="og:image" content="{{route('home')}}{{$setting->photo ? '/images/media/' . $setting->photo->file : '/img/200x200.png'}}" />
     <meta property="og:site_name" content="{{$setting->author}}" />
     <meta property="og:description" content="@yield('meta')" />
     
@@ -136,12 +136,12 @@
                  <div class="ct-topbar-social">
                     @if (!empty($currentLang) && count($langs) > 1)
                         <a class="nav-link dropdown-toggle" title="{{$currentLang->code}}" href="#0"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="flag-lang" width="16" height="16" src="{{$currentLang->photo ? '/public/images/media/' . $currentLang->photo->file : '/public/img/200x200.png'}}"> 
+                            <img class="flag-lang" width="16" height="16" src="{{$currentLang->photo ? '/images/media/' . $currentLang->photo->file : '/img/200x200.png'}}"> 
                             <span>{{$currentLang->code}}</span>
                         </a>
                         <div class="dropdown-menu">
                             @foreach ($langs as $key => $lang)
-                                <a title="{{$lang->name}}" class="dropdown-item" href='{{ route('changeLanguage', $lang->code) }}'> <img class="flag-lang" width="16" height="16" src="{{$lang->photo ? '/public/images/media/' . $lang->photo->file : '/public/img/200x200.png'}}">  <span>{{$lang->name}}</span></a>
+                                <a title="{{$lang->name}}" class="dropdown-item" href='{{ route('changeLanguage', $lang->code) }}'> <img class="flag-lang" width="16" height="16" src="{{$lang->photo ? '/images/media/' . $lang->photo->file : '/img/200x200.png'}}">  <span>{{$lang->name}}</span></a>
                             @endforeach
                         </div>
                     @endif
@@ -156,7 +156,7 @@
                     
                     <div class="navbar-header col-6 col-md-2">
                         <a class="navbar-brand" href="{{url('/')}}" title="{{$setting->title}}">
-                            <img width="123" height="37" class="img-fluid logo-front" src="{{$setting->photo ? '/public/images/media/' . $setting->photo->file : '/public/img/200x200.png'}}" alt="">
+                            <img width="123" height="37" class="img-fluid logo-front" src="{{$setting->photo ? '/images/media/' . $setting->photo->file : '/img/200x200.png'}}" alt="">
                         </a>
                         
                     </div>
@@ -328,7 +328,7 @@
         <span itemprop="description">@yield('meta')</span> 
         <a itemprop="url" href="{{route('home')}}"> </a>
         <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-        <img src="{{route('home')}}{{$setting->photo ? '/public/images/media/' . $setting->photo->file : '/public/img/200x200.png'}}" alt="logo" width="120" itemprop="url"></div>
+        <img src="{{route('home')}}{{$setting->photo ? '/images/media/' . $setting->photo->file : '/img/200x200.png'}}" alt="logo" width="120" itemprop="url"></div>
         <span itemprop="name">{{$setting->title}}</span>
         <em><span itemprop="priceRange">{{$setting->price_range}}</span></em>
         <div itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress"> 
