@@ -31,7 +31,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fab fa-github"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Niva<sup>v2.0</sup></div>
+                <div class="sidebar-brand-text mx-3">XpartDevs<sup>v2.0</sup></div>
             </a>
 
             <!-- Divider -->
